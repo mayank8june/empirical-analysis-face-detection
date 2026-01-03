@@ -1,5 +1,6 @@
 from tkinter import *
 import os
+import sys
 
 root = Tk(className = 'face_recognition_gui')
 root.title('Face Recognizer');
@@ -14,31 +15,31 @@ w.pack()
 
 def train_fisher_btn_load():
     name = svalue.get()
-    os.system('python train_fisher.py %s'%name)
+    os.system('%s train_fisher.py %s'%(sys.executable, name))
 
 def train_eigen_btn_load():
     name = svalue.get()
-    os.system('python train_eigen.py %s'%name)
+    os.system('%s train_eigen.py %s'%(sys.executable, name))
 
 def train_lbph_btn_load():
     name = svalue.get()
-    os.system('python train_lbph.py %s'%name)
+    os.system('%s train_lbph.py %s'%(sys.executable, name))
 
 def recog_fisher_btn_load():
-    os.system('python recog_fisher.py')
+    os.system('%s recog_fisher.py'%sys.executable)
 
 def recog_eigen_btn_load():
-    os.system('python recog_eigen.py')
+    os.system('%s recog_eigen.py'%sys.executable)
 
 def recog_lbph_btn_load():
-    os.system('python recog_lbph.py')
+    os.system('%s recog_lbph.py'%sys.executable)
 
 def recog_dlib():
-    os.system('python face_recog.py')
+    os.system('%s face_recog.py'%sys.executable)
 
 def add_person():
     name = svalue.get()
-    os.system('python add_person.py %s'%name)
+    os.system('%s add_person.py %s'%(sys.executable, name))
 
 add_btn = Button(root,text="Add", command=add_person)
 add_btn.pack()

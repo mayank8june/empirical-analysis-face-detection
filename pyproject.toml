@@ -1,0 +1,24 @@
+[tool.poetry]
+package-mode = false
+
+[project]
+name = "empirical-analysis-face-detection"
+version = "0.1.0"
+description = "Empirical analysis of face detection algorithms"
+authors = [
+    {name = "Mayank"}
+]
+readme = "README.md"
+requires-python = "^3.12"
+dependencies = [
+    "numpy (>=1.26.0,<2.0.0)",
+    "opencv-contrib-python (>=4.8.0)",
+    "face-recognition (>=1.3.0)",
+    "face-recognition-models (>=0.3.0)",
+    "setuptools (>=80.9.0,<81.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
